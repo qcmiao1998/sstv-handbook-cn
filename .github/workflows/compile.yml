@@ -1,0 +1,19 @@
+name: Compile main tex file of SSTV Handbook CN
+on: [push, pull_request]
+jobs:
+  build_mainfile:
+    name: Build main Latex file
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: sstv-handbook-cn.tex
+          args: "-xelatex -file-line-error -interaction=nonstopmode -shell-escape"
+      - name: Upload pdf
+        uses: actions/checkout@v1
+        with:
+          name: SSTV_Handbook_CN
+          path: sstv-handbook-cn.pdf
