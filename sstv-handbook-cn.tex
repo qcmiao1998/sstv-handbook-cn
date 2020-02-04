@@ -1,4 +1,4 @@
-\documentclass[lang=cn,11pt,base=off,simple]{elegantbook}
+\documentclass[lang=cn,11pt,base=hide,simple]{elegantbook}
 % title info
 \title{慢扫描电视 (SSTV) 手册}
 \subtitle{Image Communication on Short Waves\\短波图像传输}
@@ -14,20 +14,17 @@
 \extrainfo{基于 Martin Bruchanov (OK2MNM) 的英文版翻译.}
 %\cover{example-image-plain.pdf}
 
+% extra package
+\usepackage{subfigure}
+
 \begin{document}
 	\maketitle
 	\frontmatter
-	\mainmatter
-	\newpage
 	% Preface
-	\setcounter{page}{1}
-	\pagenumbering{Roman}
 	\include{ch0/ch0_Preface_en}
 	
 	\tableofcontents
-	\newpage
-	\setcounter{page}{1}
-	\pagenumbering{arabic}
-	\include{ch1/ch1_ch}
+	\mainmatter
 	
+	\include{ch1/ch1_Slow-scan_television}
 \end{document}
