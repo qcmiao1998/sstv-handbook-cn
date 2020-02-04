@@ -1,0 +1,33 @@
+\documentclass[lang=cn,11pt,base=off,simple]{elegantbook}
+% title info
+\title{慢扫描电视 (SSTV) 手册}
+\subtitle{Image Communication on Short Waves\\短波图像传输}
+
+% bio info
+%\author{Your Name}
+%\date{\today}
+\bioinfo{翻译}{缪渠成 (BH4EZW) \& 储皓元 (9V1HY)}
+
+% extra info
+\usepackage{datetime2}
+\version{\today}
+\extrainfo{基于 Martin Bruchanov (OK2MNM) 的英文版翻译.}
+%\cover{example-image-plain.pdf}
+
+\begin{document}
+	\maketitle
+	\frontmatter
+	\mainmatter
+	\newpage
+	% Preface
+	\setcounter{page}{1}
+	\pagenumbering{Roman}
+	\include{ch0/ch0_Preface_en}
+	
+	\tableofcontents
+	\newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	
+	
+\end{document}
