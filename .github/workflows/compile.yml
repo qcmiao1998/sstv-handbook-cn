@@ -13,7 +13,7 @@ jobs:
           root_file: sstv-handbook-cn.tex
           args: "-xelatex -file-line-error -interaction=nonstopmode -shell-escape"
       - name: Upload pdf
-        uses: actions/checkout@v1
+        uses: actions/upload-artifact@v1
         with:
           name: SSTV_Handbook_CN
           path: sstv-handbook-cn.pdf
