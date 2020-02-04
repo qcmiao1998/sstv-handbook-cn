@@ -46,7 +46,7 @@ SSTV发展的早期阶段收到了两家公司的影响——美国Robot研究�
 
 SSTV信号通过音频信号的频率调制来传输。为了避免任何相位移动和漂移（两者都对图像质量有消极影响），图像信号的频谱在辅助载波频率1900H的副载波（Sub-carrier）上被调制。这种调制方法叫做副载波频率调制（Sub-carrier frequency modulation）。
 
-图像信号的频率在灰度上的黑色与白色之间变换。根据SSTV模式、传输时间和图像内容的不同，SSTV传输所需的带宽从1.0到3.2kHz之间变换，见图3.1。
+图像信号的频率在灰度上的黑色与白色之间变换。根据SSTV模式、传输时间和图像内容的不同，SSTV传输所需的带宽从1.0到3.2kHz之间变换，见图2.1。
 
 廉价的调制解调器（基于Hamcomm）不使用完美的连续谐波信号，但也能创建量化的信号。量化等级的变化需要更宽的频宽，那样一些图像细节就可以被丢失。
 
@@ -58,14 +58,25 @@ F——信号内容：电视信号。
 
 当SSTV在调频（FM）频道发射时，发射类别为F3F，在双边带调谐（AM）频道时为A3F。
 
-图3.1：两个不同的图像使用Martin M1模式发射的SSTV频谱
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/obrazek1.png}
+	\caption{两个不同的图像使用 Martin M1 模式发射的SSTV频谱}
+\end{figure}
 
-图3.2：图像质量取决于分辨率
+\begin{figure}
+	\centering
+	\subfigure[50x38]{
+		\includegraphics[width=0.45\linewidth]{figs/obrazek1.png}}
+	\subfigure[120x90]{
+		\includegraphics[width=0.45\linewidth]{figs/copthorn.png}}
+	\caption{图像质量取决于分辨率}
+\end{figure}
 
 
 \section{图像分辨率}
 
-分辨率是告诉人们能在一张图像里存储多少细节的一个功能，见图3.2。分辨率有两个参数：水平分辨率——图像的列数×图像的行数——垂直分辨率。
+分辨率是告诉人们能在一张图像里存储多少细节的一个功能，见图2.2。分辨率有两个参数：水平分辨率——图像的列数×图像的行数——垂直分辨率。
 
 在电视科技中，垂直分辨率（行数）更加重要，它由SSTV模式的选择来定义。要获得水平分辨率更加复杂。
 
@@ -75,19 +86,36 @@ SSTV是一种模拟模式，它不能无损地传输图像。在接收端的图�
 
 大多数模式都发送240行的图像，图像以4：3的宽高比在屏幕上显示。我们可以说列数是240×4/3=320。这个数值对应着理论上的分辨率，但不是真实的图像分辨率。
 
-测试图（图3.3）被用于测试图像的水平分辨率。分辨率图像包含了从疏到密各种密度的黑白交叉条纹。这张图片和普通照片的对比在图3.1。
+测试图（图2.3）被用于测试图像的水平分辨率。分辨率图像包含了从疏到密各种密度的黑白交叉条纹。这张图片和普通照片的对比在图2.1。
 
-所有在图3.3中的模式都有320列。但我们可以看到，不是所有模式都能发送实际质量的图像。括号中的注释描述了发送1像素需要的大致时间。在Martin M2模式下我们很难分辨出第二细的网格，M1模式加倍了传输时间，它能没有问题地传输这个网格，但是最细的网格是失真的。与图3.4中的真实图像对比。列出的最后两种模式有更长的传输时间，能够发送最细致的细节。不幸的是，由于传输速度变慢，它很难得到补偿。
+所有在图2.3中的模式都有320列。但我们可以看到，不是所有模式都能发送实际质量的图像。括号中的注释描述了发送1像素需要的大致时间。在Martin M2模式下我们很难分辨出第二细的网格，M1模式加倍了传输时间，它能没有问题地传输这个网格，但是最细的网格是失真的。与图2.4中的真实图像对比。列出的最后两种模式有更长的传输时间，能够发送最细致的细节。不幸的是，由于传输速度变慢，它很难得到补偿。
 
-原始测试图案
-Martin M2（~220μs）
-Robot 36 彩色
-Martin M1
-MP115
-Scottie DX
-图3.3 几种SSTV模式水平分辨率的对比
+\begin{figure}
+	\centering
+	\subfigure[原始测试图案]{
+		\includegraphics[width=0.45\linewidth]{figs/obrazek1.png}}
+	\subfigure[Martin M2（~220μs）]{
+		\includegraphics[width=0.45\linewidth]{figs/copthorn.png}}
+	\subfigure[Robot 36 彩色]{
+		\includegraphics[width=0.45\linewidth]{figs/copthorn.png}}
+	\subfigure[Martin M1]{
+		\includegraphics[width=0.45\linewidth]{figs/copthorn.png}}
+	\subfigure[MP115]{
+		\includegraphics[width=0.45\linewidth]{figs/copthorn.png}}
+	\subfigure[Scottie DX]{
+		\includegraphics[width=0.45\linewidth]{figs/copthorn.png}}	
+	\caption{几种SSTV模式水平分辨率的对比}
+\end{figure}
 
-图3.4 在14MHz真实条件下两种模式的对比
+\begin{figure}
+	\centering
+	\subfigure[Martin M1]{
+		\includegraphics[width=0.45\linewidth]{figs/obrazek1.png}}
+	\subfigure[Martin M2]{
+		\includegraphics[width=0.45\linewidth]{figs/copthorn.png}}
+	\caption{在14MHz现实环境下两种模式的对比}
+\end{figure}
+
 
 \section{行速度}
 
@@ -117,19 +145,33 @@ Scottie DX
 
 但是一个黑白电视摄相机只会扫描光强度等级，由此产生的图像会看起来像所有颜色都相同。它们会根据它们的强度以相同的灰度等级表示。由于这个事实，一个从基本颜色分量R、G和B（红、绿和黑）构成的有效的灰度图像Y被定义为：
 
-Y=0.30R+0.59G+0.11B
+$Y=0.30R+0.59G+0.11B$
 
 请注意，最大的因数0.59只是绿色的，所以接近60\%我们看到的颜色取决于绿色分，只有40\%来自其余的颜色成分！这个公式是用于简化黑白图像使用的彩色扫描转换器。在过去，黑白图像并不是以真实的灰度图像发送的，亮度信号是从图像里绿色分量的亮度得来的。同一个图像的真实黑白图像和绿色分量的区别通常是微不足道的。
 
-图3.5 黑白图像的扫描行
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/obrazek1.png}
+	\caption{黑白图像的扫描行}
+\end{figure}
 
-图3.6 彩色图像到基本颜色分量的分解
-红色成分
-绿色成分
-蓝色成分
-真实彩色图像
-真实灰度
-亮度
+\begin{figure}
+	\centering
+	\subfigure[红色分量]{
+		\includegraphics[width=0.3\linewidth]{figs/obrazek1.png}}
+	\subfigure[绿色分量]{
+		\includegraphics[width=0.3\linewidth]{figs/copthorn.png}}
+	\subfigure[蓝色分量]{
+		\includegraphics[width=0.3\linewidth]{figs/copthorn.png}}
+	\subfigure[真实彩色图像]{
+		\includegraphics[width=0.3\linewidth]{figs/copthorn.png}}
+	\subfigure[真实灰度]{
+		\includegraphics[width=0.3\linewidth]{figs/copthorn.png}}
+	\subfigure[亮度]{
+		\includegraphics[width=0.3\linewidth]{figs/copthorn.png}}	
+	\caption{彩色图像到基本颜色分量的分解}
+\end{figure}
+
 
 \section{彩色传输}
 
@@ -145,11 +187,22 @@ Y=0.30R+0.59G+0.11B
 
 加色法模型需要更长的时间去传输，但是它提供了真实的色彩。
 
-图3.7 彩色图像到RGB信号的分解图
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/obrazek1.png}
+	\caption{彩色图像到RGB信号的分解图}
+\end{figure}
+
 
 \subsection{复合颜色模型}
 
 第二种彩色传输类型叫做YCrCb。事实上这是一种和彩色快扫描电视类似的系统，每个颜色分量R、G和B，被转化成亮度和色度（颜色信息）信号。和RGB不同，这种传输的时间更短。这种颜色编码被用在电视广播中，黑白和彩色的兼容性上，黑白电视也可以接收彩色广播。
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/obrazek1.png}
+	\caption{彩色图像到YCrCb信号的分解图}
+\end{figure}
 
 图像扫描行包含了颜色的两种分量——亮度和色度。色度信号是由两种不同的颜色信号R-Y和B-Y组成的。Y信号被称作亮度，它包含了对应公式Y=0.30R+0.59G+0.10B的亮度信号。Y是从红色和蓝色减去的色度信号。
 
@@ -163,7 +216,11 @@ Y=0.30R+0.59G+0.11B
 
 与RGB模型相比，它的缺点是图像信息的丢失，在使用4：2：0格式的时候更加明显。另外，它需要精确的收发信机调谐，否则色彩信息会失真，这也是为什么YCRCB编码更少的被使用的原因。根据载波的正向或负向偏移，图像的色调会强烈地偏向粉色或绿色，见图3.9。
 
-图3.9 当电台调整不当时YCrCb的颜色失真
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/obrazek1.png}
+	\caption{当电台调整不当时YCrCb的颜色失真}
+\end{figure}
 
 彩色FSTV传输在使用YCrCb的同时也使用特殊的方法和调制（在PAL、SECAM中）来消除这种可能发生在传输路径上的颜色失真。不幸的是，这个功能并不存在于SSTV，所以选择性衰减会导致图像的彩色重影。
 
@@ -171,7 +228,12 @@ Y=0.30R+0.59G+0.11B
 
 当发射机载波有明显的±200Hz偏移时，RGB模型会因为低对比度或增加的亮度而失真，从而提供比YCrCb更好的色彩。
 
-图3.10 当电台调整不当时RGB的颜色失真
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{figs/obrazek1.png}
+	\caption{当电台调整不当时RGB的颜色失真}
+\end{figure}
+
 
 \section{同步}
 
